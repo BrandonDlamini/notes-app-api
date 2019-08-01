@@ -30,7 +30,7 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      Resource: "arn:aws:dynamodb:us-east-2:*:*"
+      Resource: "arn:aws:dynamodb:us-east-2:514328360968:table/notes"
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
@@ -90,5 +90,3 @@ functions:
           path: notes/{id}
           method: delete
           cors: true
-          authorizer: aws_iam
-          
